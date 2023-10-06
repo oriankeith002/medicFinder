@@ -3,11 +3,11 @@ from msearch.models import *
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    role = models.IntegerChoices(choices=ROLE_CHOICE, default=3)
-    birthday = models.DateField()
-    created_at = models.DateTimeField()
-    updated_at = models.DateTimeField()
-    token = models.CharField()
+    role = models.IntegerField(choices=ROLE_CHOICE, default=3)
+    birthday = models.DateField(default=None, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    token = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return '{}'.format(self.user.username)  
