@@ -8,8 +8,10 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     updated_at = models.DateTimeField(auto_now=True)
     token = models.CharField(max_length=255, null=True, blank=True) 
-
+    # patient can add favourite doctors to his profile
     favorites = models.ManyToManyField(User, blank=True, related_name='favorites');
+
+    # doctor can now add his address and his specialities. 
     specialites = models.ManyToManyField(Speciality, blank=True, related_name="specialities")
     addressess = models.ManyToManyField(Address, blank=True, related_name='addresses');
 
