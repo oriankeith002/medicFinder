@@ -16,4 +16,5 @@ from .City import City
 from .Neighborhood import Neighborhood
 from .Address import Address
 from .Speciality import Speciality
+from .Rating import Rating
 from .Profile import Profile
