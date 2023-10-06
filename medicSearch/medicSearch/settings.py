@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # installed apps
-    msearch,
+    'msearch.apps.MsearchConfig',
 ]
 
 MIDDLEWARE = [
