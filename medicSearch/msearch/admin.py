@@ -5,8 +5,11 @@ from .models import *
 # admin panel customization
 
 class ProfileAdmin(admin.ModelAdmin):
-    # create a hierarchy filter with dates
-    date_hierarchy = 'created_at'
+#     # date_hierarchy = 'created_at' # create a hierarchy filter with dates
+#     list_display = ('user','role','birthday',)
+#     list_display_links = ('user','role',)
+    pass
+
 
 
 # Register your models here.
