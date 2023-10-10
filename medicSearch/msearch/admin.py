@@ -4,11 +4,14 @@ from .models import *
 
 # admin panel customization
 
+class ProfileAdmin(admin.ModelAdmin):
+    # create a hierarchy filter with dates
+    date_hierarchy = 'created_at'
 
 
 # Register your models here.
 
-admin.site.register(Profile);
+admin.site.register(Profile, ProfileAdmin);
 admin.site.register(State)
 admin.site.register(City)
 admin.site.register(Neighborhood)
