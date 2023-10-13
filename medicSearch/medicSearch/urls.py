@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('msearch.urls.HomeUrls')),
     path('profile/',include('msearch.urls.ProfileUrls')),
+    path('medic/',include('msearch.urls.MedicUrls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
