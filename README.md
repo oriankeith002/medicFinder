@@ -1,0 +1,1 @@
+Hi there, this was a project about finding medical professionals within a given location or region
